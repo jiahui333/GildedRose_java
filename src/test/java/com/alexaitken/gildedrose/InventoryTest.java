@@ -18,8 +18,8 @@ public class InventoryTest {
 	@Test
 	public void should_never_changes_quailty_of_Sulfuras() throws Exception {
 		Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
-		
-		Inventory sut = new Inventory((Item[]) Arrays.asList(new Item("Sulfuras, Hand of Ragnaros", 0, 80)).toArray());
+
+		Inventory sut = new Inventory((Item[]) Arrays.asList(sulfuras).toArray());
 		
 		sut.updateQuality();
 		
