@@ -10,28 +10,6 @@ This is a Java version of the Gilded Rose Kata, original found
 
 * I have moved the hard coded items to the default constructor and gave an alternative constructor to allows the tests to inject the list of items.
 
-
-## Setup
-
-This has been setup as an eclipse project.  I have not provided an ant build file or a maven pom.
-* To setup create a new java project in eclipse.  (check out the code from git hub directly or import it into your java project)
-* add the junit 4 library to your build path.
-* include both the test and src directory as "Source Folders"
-* right click the project and run as JUnit test
-
-
-## Branches
-
-* The 'master' branch contains the starting point for the kata.  It is
-  also tagged as 'start-here'.
-
-* The 'solution' branch is my first solution for this kata. Feedback welcome!
-
-It was fun. You should give it a try!
-
-Alex    
- 
-
 # Original Description of the Gilded Rose
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn
