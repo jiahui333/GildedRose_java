@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.alexaitken.gildedrose;
+package com.alexaitken.gildedrose.items;
 
 public class Item {
 
@@ -11,18 +11,16 @@ public class Item {
 	private int quality;
 
 	public Item(String name, int sellIn, int quality) {
-		super();
 		this.name = name;
 		this.sellIn = sellIn;
 		this.quality = quality;
 	}
 
-	public String getName() {
-		return name;
+	public Item(String name) {
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getName() {
+		return name;
 	}
 
 	public int getSellIn() {
