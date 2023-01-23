@@ -1,12 +1,19 @@
 package com.alexaitken.gildedrose.items;
 
-public class ConjuredManaCake extends Item implements UpdateQuality{
-    public ConjuredManaCake(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+public class ConjuredManaCake implements UpdateQuality{
+    private Item item;
+    public ConjuredManaCake(Item item) {
+        this.item = item;
     }
 
     @Override
     public void updateQuality() {
-        setQuality(getQuality() - 1);
+        if (item.getSellIn() < 0) {
+            item.setQuality(item.getQuality() - 2);
+        } else if (item.getQuality() >= 1) {
+            item.setQuality(item.getQuality() - 1);
+        }
+
+        item.setSellIn(item.getSellIn() - 1);
     }
 }

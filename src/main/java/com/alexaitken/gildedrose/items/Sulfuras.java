@@ -1,14 +1,14 @@
 package com.alexaitken.gildedrose.items;
 
-public class Sulfuras extends Item implements UpdateQuality{
+public class Sulfuras implements UpdateQuality{
+    private Item item;
 
-    public Sulfuras(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+    public Sulfuras(Item item) {
+        this.item = item;
     }
 
 
     @Override
     public void updateQuality() {
-
     }
 }

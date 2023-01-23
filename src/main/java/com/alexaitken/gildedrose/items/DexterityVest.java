@@ -1,16 +1,20 @@
 package com.alexaitken.gildedrose.items;
 
-public class DexterityVest extends Item implements UpdateQuality{
+public class DexterityVest implements UpdateQuality{
+    private Item item;
 
-    public DexterityVest(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+    public DexterityVest(Item item) {
+        this.item = item;
     }
 
     @Override
     public void updateQuality() {
-        if (getQuality() >= 0) {
-            setQuality(getQuality() - 1);
-            setSellIn(getSellIn() - 1);
-        };
+        if (item.getSellIn() < 0) {
+            item.setQuality(item.getQuality() - 2);
+        }else if (item.getQuality() >= 1) {
+            item.setQuality(item.getQuality() - 1);
+        }
+
+        item.setSellIn(item.getSellIn() - 1);
     }
 }

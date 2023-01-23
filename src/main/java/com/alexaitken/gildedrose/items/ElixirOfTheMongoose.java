@@ -1,12 +1,17 @@
 package com.alexaitken.gildedrose.items;
 
-public class ElixirOfTheMongoose extends Item implements UpdateQuality{
-    public ElixirOfTheMongoose(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+public class ElixirOfTheMongoose implements UpdateQuality{
+    private Item item;
+    public ElixirOfTheMongoose(Item item) {
+        this.item = item;
     }
 
     @Override
     public void updateQuality() {
-        setQuality(getQuality() - 1);
+        if (item.getQuality() >= 1) {
+            item.setQuality(item.getQuality() - 1);
+        }
+
+        item.setSellIn(item.getSellIn() - 1);
     }
 }

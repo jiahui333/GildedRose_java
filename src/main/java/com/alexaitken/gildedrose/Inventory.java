@@ -14,19 +14,19 @@ public class Inventory {
 
 	public Inventory() {
 		items = new Item[] {
-				(Item) ItemFactory.createNewItem("+5 Dexterity Vest", 10, 20),
-				(Item) ItemFactory.createNewItem("Aged Brie", 2, 0),
-				(Item) ItemFactory.createNewItem("Elixir of the Mongoose", 5, 7),
-				(Item) ItemFactory.createNewItem("Sulfuras, Hand of Ragnaros", 0, 80),
-				(Item) ItemFactory.createNewItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-				(Item) ItemFactory.createNewItem("Conjured Mana Cake", 3, 6)
-				};
+				new Item("+5 Dexterity Vest", 10, 20),
+				new Item("Aged Brie", 2, 0),
+				new Item("Elixir of the Mongoose", 5, 7),
+				new Item("Sulfuras, Hand of Ragnaros", 0, 80),
+				new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+				new Item("Conjured Mana Cake", 3, 6)
+		};
 
 	}
 
 	public void updateQuality() {
 		for (Item item : items) {
-			UpdateQuality newItem = ItemFactory.createNewItem(item.getName(), item.getSellIn(), item.getQuality());
+			UpdateQuality newItem = ItemFactory.createNewItem(item);
 			newItem.updateQuality();
 		}
 	}
